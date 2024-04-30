@@ -1,11 +1,16 @@
 //https://www.freecodecamp.org/news/react-crud-app-how-to-create-a-book-management-app-from-scratch/
 
 import React from "react";
+import { useNavigate } from "react-router";
 import BookForm from './BookForm';
+import { useNavItem } from "@restart/ui/esm/NavItem";
 
-const AddBook = () => {
+const AddBook = ({ history, books, setBooks }) => {
+    const navigate = useNavigate();
+
     const handleOnSubmit = (book) => {
-        console.log(book);
+        setBooks([book, ...books]);
+        navigate('/')
     }
 
 
