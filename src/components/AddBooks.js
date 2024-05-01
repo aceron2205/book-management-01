@@ -4,7 +4,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import BookForm from './BookForm';
 
-const AddBook = ({ history, books, setBooks }) => {
+const AddBook = ({ books, setBooks }) => {
     const navigate = useNavigate();
 
     const handleOnSubmit = (book) => {
