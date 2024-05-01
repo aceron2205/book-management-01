@@ -4,10 +4,11 @@ import React from "react";
 import _ from 'lodash';
 import Book from "./Book";
 
-const BooksList = ({ books, setBook }) => {
+const BooksList = ({ books, setBooks }) => {
 
     const handleRemoveBook = (id) => {
-        setBook(books.filter((book) => book.id !== id));
+        setBooks(books.filter((book) => book.id !== id));
+        //VIEW MARKS THAT SETBOOK IS NOT A FUNCTION
     };
 
     return (
