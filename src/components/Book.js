@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router";
 
-const navigate = useNavigate()
 
 const Book = ({
     id,
@@ -13,6 +12,9 @@ const Book = ({
     date,
     handleRemoveBook
 }) => {
+    const navigate = useNavigate()
+
+
     return (
         <Card style={{ width: '18rem' }} className="book">
             <Card.Body>
