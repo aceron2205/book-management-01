@@ -8,11 +8,9 @@ const EditBook = ({ books, setBooks }) => {
     const bookToEdit = books.find((book) => book.id === id);
 
     const handleOnSubmit = (editedBook) => {
-        const updatedBooks = books.filter(book => (book.id === id ? editedBook : book));
+        const updatedBooks = books.map(book => (book.id === id ? editedBook : book));
         setBooks(updatedBooks)
         console.log('lista de libros', updatedBooks)
-
-
 
         navigate('/');
     }
